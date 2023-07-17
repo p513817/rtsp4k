@@ -1,0 +1,23 @@
+# YAML
+version: '3'
+services:
+  mediamtx:
+    container_name: r4k-mediamtx
+    image: aler9/rtsp-simple-server
+    network_mode: host
+  rtsp4k:
+    container_name: r4k-service
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    image: rtsp4k
+    volumes:
+      - './:/workspace'
+      - '/etc/localtime:/etc/localtime:ro'
+    stdin_open: true
+    tty: true
+    network_mode: host
+    environment:
+      - PORT=1809
+    depends_on:
+      - mediamtx
