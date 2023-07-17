@@ -1,1 +1,7 @@
-{"streams": {"sample": {"input": "./data/funny_cat.mp4"}, "max": {"input": "./data/ans_output.mp4"}}}
+{
+  "streams": {
+    "sample": {
+      "input": "./data/funny_cat.mp4"
+    }
+  }
+}
