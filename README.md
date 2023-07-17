@@ -9,7 +9,12 @@ Generate RTSP in simple way.
 
 # Quick Start
 ```bash
-docker compose up 
+# Clone Repo
+git clone https://github.com/p513817/rtsp4k.git
+
+# Launch RTSP4K
+docker compose up
+ 
 # Ctrl+C to leave
 ```
 ![rtsp4k-cli](assets/rtsp4k-cli.png)
